@@ -50,13 +50,13 @@ public class BoardDTO {
           boardDTO.setBoardHits(boardEntity.getBoardHits());
           boardDTO.setBoardCreatedTime(boardEntity.getCreatedTime());
 
-          if(boardEntity.getFileAttached() == 0) {
-               boardDTO.setFileAttached(boardEntity.getFileAttached()); // 0
-          } else {
+          if(boardEntity.getFileAttached() == 0) { // 0
+               boardDTO.setFileAttached(boardEntity.getFileAttached());
+          } else { // 1
                List<String> orginalFileNameList = new ArrayList<>();
                List<String> storedFileNameList = new ArrayList<>();
 
-               boardDTO.setFileAttached(boardEntity.getFileAttached()); // 1
+               boardDTO.setFileAttached(boardEntity.getFileAttached());
 
                for(BoardFileEntity boardFileEntity : boardEntity.getBoardFileEntityList()) {
                     orginalFileNameList.add(boardFileEntity.getOriginalFileName());
