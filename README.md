@@ -35,3 +35,6 @@ BoardService.save()
 BoardEntity
 BoardFileEntity, BoardFileRepository 추가
 detail.html
+
++ 댓글 기능 구
++ commentController, CommentService, CommentDTO, CommentRepository
